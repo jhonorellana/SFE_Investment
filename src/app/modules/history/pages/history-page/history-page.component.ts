@@ -1,8 +1,9 @@
 import { SearchService } from './../../services/search.service';
 import { Component, OnInit} from '@angular/core';
 import { MonthlyamortizationModel } from '@core/models/monthlyamortization.model';
-import { InvestmentService } from '../../../investment/services/investment.service';
-import { Subscription } from 'rxjs';
+//import { InvestmentService } from '../../../investment/services/investment.service';
+import { Subscription, Observable, of } from 'rxjs';
+
 
 @Component({
   selector: 'app-history-page',
@@ -11,15 +12,17 @@ import { Subscription } from 'rxjs';
 })
 
 export class HistoryPageComponent implements OnInit{
-  MonthlyamortizationList: Array<MonthlyamortizationModel> = []
+  MonthlyamortizationList$: Observable<any> = of([])
+  MonthlyamortizationList: MonthlyamortizationModel[] = [];
   FutureMontlyamortizationList: Array<MonthlyamortizationModel> = []
 
-  constructor(private investmentService: InvestmentService){}
+//  constructor(private investmentService: InvestmentService){}
+  constructor(private searchService: SearchService){}
 
   listObservers$: Array<Subscription>=[]
 
   ngOnInit(): void{
-    this.investmentService.getMonthlyDataForCurrentMonth$('Noviembre')
+    this.searchService.SearchYearlyAmortization$('2022')
           .subscribe((response: MonthlyamortizationModel[]) => {
                         this.MonthlyamortizationList = response
                       }, err => {console.log('Error de conexion');}
@@ -28,8 +31,9 @@ export class HistoryPageComponent implements OnInit{
   }
 
   receiveData(event: string):void {
-    console.log('✌🤷‍♂️🤷‍♂️🤷‍♀️🤷‍♀️ estoy en el padre jaja', event);
-    this.investmentService.getMonthlyDataForCurrentMonth$(event)
+    console.log('✌ Padre: has digitado --> ', event);
+    this.MonthlyamortizationList$ = this.searchService.SearchYearlyAmortization$(event)
+    //.subscribe((data) => {this.MonthlyamortizationList$ = data;});
 
 
   }

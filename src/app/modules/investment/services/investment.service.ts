@@ -14,15 +14,16 @@ export class InvestmentService {
 //    constructor(private httpClient: HttpClient) {}
 
     getAllMontlyAmortization$(): Observable<any>{
+          console.log('Entré a consultar nuevamente');
           return this.httpClient.get(`${this.URL}`);
     }
 
-    getMonthlyDataForCurrentMonth$(_month: string ): Observable<any> {
+    getMonthlyDataForCurrentMonth$(currentMonth: string ): Observable<any> {
+      console.log('Dentro de la funcion esta -->',currentMonth);
       return this.getAllMontlyAmortization$().pipe(
         map((data: any[]) => {
-          const currentMonth = _month; //this.datePipe.transform(new Date(), 'MMMM');
-          console.log(currentMonth)
-          return data.filter((item) => item.month === currentMonth);
+          console.log('Data from service:', data);
+          return data.filter((item) => item.month === 'Octubre');
         })
       );
     }

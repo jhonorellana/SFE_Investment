@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit{
   }
 
   callSearch(term: string):void{
-         if (term.length>2)
+         if (term.length==4)
          {
           console.log('Emitiendo desde el Hijo .....👍😊❤',term);
           this.callbackData.emit(term)
