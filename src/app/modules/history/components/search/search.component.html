@@ -1,0 +1,6 @@
+<div class="search-component">
+  <input type="text" placeholder="año" [(ngModel)]="src1" (ngModelChange) = "callSearch($event)">
+  <input type="text" placeholder="mes" [(ngModel)]="src2" (ngModelChange) = "callSearch($event)">
+  <div>resultado: {{src1}}</div>
+  <div>resultado: {{src2}}</div>
+</div>

@@ -1,0 +1,67 @@
+<div class="section--generic_jao">
+  <h1 class="section--generic__title">{{title}}</h1>
+
+  <div class="section--generic__player--zone_jao">
+
+    <div class="row">
+      <div class="col-2">
+        <select name="anio" id="anio"  class="form-select mb-3" aria-label="Año">
+          <option value="Todos">Todos</option>
+          <option value="2014">2014</option>
+          <option value="2015">2015</option>
+          <option value="2014">2016</option>
+          <option value="2015">2017</option>
+          <option value="2014">2018</option>
+          <option value="2015">2019</option>
+          <option value="2014">2020</option>
+          <option value="2015">2021</option>
+          <option value="2014">2022</option>
+          <option value="2015">2023</option>
+        </select>
+      </div>
+      <div class="col-2">
+        <select name="mes" id="mes" class="form-select mb-3" aria-label="Mes">
+          <option value="Todos">Todos</option>
+          <option value="Enero">Enero</option>
+          <option value="Febrero">Febrero</option>
+          <option value="Marzo">Marzo</option>
+          <option value="Abril">Abril</option>
+          <option value="Mayo">Mayo</option>
+          <option value="Junio">Junio</option>
+          <option value="Julio">Julio</option>
+          <option value="Agosto">Agosto</option>
+          <option value="Septiembre">Septiembre</option>
+          <option value="Octubre">Octubre</option>
+          <option value="Noviembre">Noviembre</option>
+          <option value="Octubre">Diciembre</option>
+        </select>
+      </div>
+        <div class="col-2">
+          <button class="btn btn-primary mb-3">Consultar</button>
+      </div>
+    </div>
+
+        <div class="miTabla" table-responsive-md>
+          <table class="table table-striped table-hover table-sm table-bordered table-success">
+            <thead>
+              <tr>
+                <th>Año</th>
+                <th>Mes</th>
+                <th>Interés</th>
+                <th>Capital</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+              <tbody>
+                <tr *ngFor="let item of dataMonhtlyamortization">
+                  <td>{{ item.year }}</td>
+                  <td>{{ item.month }}</td>
+                  <td>{{ item.interest }}</td>
+                  <td>{{ item.capital }}</td>
+                  <td>{{ item.total }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+  </div>
+</div>
