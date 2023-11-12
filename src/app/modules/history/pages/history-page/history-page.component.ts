@@ -1,8 +1,6 @@
 import { SearchService } from './../../services/search.service';
 import { Component, OnInit, numberAttribute} from '@angular/core';
-//import { MonthlyamortizationModel } from '@core/models/monthlyamortization.model';
-//import { InvestmentService } from '../../../investment/services/investment.service';
-import { Subscription, Observable, of } from 'rxjs';
+import { Subscription, Observable, of, map } from 'rxjs';
 
 
 @Component({
@@ -20,6 +18,8 @@ export class HistoryPageComponent implements OnInit{
   AnioActual: string ="";
   FechaActual = new Date();
 
+  totalInteres: number=0;
+
   constructor(private searchService: SearchService){}
 
   listObservers$: Array<Subscription>=[]
@@ -33,6 +33,8 @@ export class HistoryPageComponent implements OnInit{
     this.DailyamortizationList$ = this.searchService.SearchMonthlyAmortization$(this.AnioActual,this.MesActual)
     this.MonamortizationOwnerList$ = this.searchService.SearchMonAmortizationOwner$(this.AnioActual,this.MesActual)
 
+    //this.CalcularInteresTotal(this.MonthlyamortizationList$ )
+
   }
 
     recibeData(datoCambiado: string[]):void {
@@ -42,6 +44,17 @@ export class HistoryPageComponent implements OnInit{
     this.MonamortizationOwnerList$ = this.searchService.SearchMonAmortizationOwner$(datoCambiado[0],datoCambiado[1])
   }
 
+/*
+  CalcularInteresTotal(miObservable: Observable<any>){
+    miObservable.pipe(
+      map((data) => {
+        // Calcular el total del interés
+        this.totalInteres = data.reduce((total, item) => total + item.interes, 0);
+        return data;
+      }));
+
+  }
+*/
 
 }
 

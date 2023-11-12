@@ -1,9 +1,9 @@
 export interface MonthlyamortizationModel
   {
-    year: string;
-    month: string;
+    anio: string;
+    mes: string;
     capital: string;
-    interest: string;
+    interes: string;
     total: string;
   }
 
