@@ -7,24 +7,29 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SearchComponent implements OnInit{
 
-  @Output() callbackData:EventEmitter<any> = new EventEmitter()
+  @Output() devuelveData:EventEmitter<any> = new EventEmitter()
 
-     src1: string = ''
-     src2: string = ''
+      cmbMes: string ="";
+      cmbAnio: string ="";
+      FechaActual = new Date();
 
      constructor(){}
 
   ngOnInit(): void {
+        this.cmbMes = (this.FechaActual.getMonth() + 1).toString();
+        this.cmbAnio = (this.FechaActual.getFullYear()).toString();
 
   }
 
-  callSearch(term: string):void{
-         if (term.length==4)
+  enviaConsulta(textoModificado: string):void{
+    console.log('Emitiendo desde el Hijo .....👍😊❤',textoModificado);
+    this.devuelveData.emit([this.cmbAnio,this.cmbMes ])
+    /*
+         if (textoModificado.length>=1)
          {
-          console.log('Emitiendo desde el Hijo .....👍😊❤',term);
-          this.callbackData.emit(term)
-
+          this.devuelveData.emit(textoModificado)
          }
+     */
 
   }
 

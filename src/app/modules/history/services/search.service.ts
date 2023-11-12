@@ -8,18 +8,23 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class SearchService {
-  private readonly URL = environment.api;
+  private readonly URL = environment.api2;
 
   constructor(private http: HttpClient) { }
 
 
-  SearchYearlyAmortization$(term: string): Observable<any>{
-    return this.http.get(`${this.URL}?year=${term}`);
+  SearchYearlyAmortization$(cmbAnio: string): Observable<any>{
+    return this.http.get(`${this.URL}amortization?year=${cmbAnio}`);
+
+  }
+
+  SearchMonthlyAmortization$(anio: string, mes: string): Observable<any>{
+    return this.http.get(`${this.URL}monamortization?year=${anio}&month=${mes}`);
 
   }
 
 
-
+/*
   getAllMontlyAmortization$(): Observable<any>{
     console.log('Entré a consultar nuevamente');
     return this.http.get(`${this.URL}`);
@@ -35,7 +40,7 @@ export class SearchService {
   );
   }
 
-
+*/
 
 
 }

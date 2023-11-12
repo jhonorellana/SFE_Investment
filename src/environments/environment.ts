@@ -5,7 +5,9 @@
 export const environment = {
   production: false,
   //api: 'http://localhost/apinvestment/public/api/amortization'
-  api: 'http://localhost/apinvestment/public/api/amortization'
+  api: 'http://localhost/apinvestment/public/api/amortization',
+  api2: 'http://localhost/apinvestment/public/api/'
+
 };
 
 /*

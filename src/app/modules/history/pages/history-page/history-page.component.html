@@ -1,6 +1,4 @@
 <div class="history-page">
-            <app-search (callbackData)="receiveData($event)"></app-search>
-            <app-section-generic [dataMonhtlyamortization]="MonthlyamortizationList$ |async " [mode]="'small'" [title]="'!Las mejores inversiones del mundo!!'"></app-section-generic>
-            <app-section-generic [dataMonhtlyamortization]="MonthlyamortizationList" [mode]="'small'" [title]="'!Las mejores inversiones del mundo!!'"></app-section-generic>
-
+            <app-search (devuelveData)="recibeData($event)"></app-search>
+            <app-section-generic [dataDailyamortization]="DailyamortizationList$ |async " [dataMonhtlyamortization]="MonthlyamortizationList$ |async " [mode]="'small'" [title]="'Amortizaciones mensuales'"></app-section-generic>
 </div>

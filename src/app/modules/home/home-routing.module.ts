@@ -18,10 +18,6 @@ const routes: Routes = [
     loadChildren: () => import('@modules/statistics/statistics.module').then(m => m.StatisticsModule)
   },
   {
-    path: 'monamortization',
-    loadChildren: () => import('@modules/monamortization/monamortization.module').then(m => m.MonamortizationModule)
-  },
-  {
     path: 'history',
     loadChildren: () => import('@modules/history/history.module').then(m => m.HistoryModule)
   },

@@ -9,13 +9,13 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class InvestmentService {
-  private readonly URL = environment.api;
+  private readonly URL = environment.api2;
   constructor(private httpClient: HttpClient, private datePipe: DatePipe) {}
 //    constructor(private httpClient: HttpClient) {}
 
     getAllMontlyAmortization$(): Observable<any>{
           console.log('Entré a consultar nuevamente');
-          return this.httpClient.get(`${this.URL}`);
+          return this.httpClient.get(`${this.URL}amortization`);
     }
 
     getMonthlyDataForCurrentMonth$(currentMonth: string ): Observable<any> {

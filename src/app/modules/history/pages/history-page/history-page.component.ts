@@ -1,6 +1,6 @@
 import { SearchService } from './../../services/search.service';
-import { Component, OnInit} from '@angular/core';
-import { MonthlyamortizationModel } from '@core/models/monthlyamortization.model';
+import { Component, OnInit, numberAttribute} from '@angular/core';
+//import { MonthlyamortizationModel } from '@core/models/monthlyamortization.model';
 //import { InvestmentService } from '../../../investment/services/investment.service';
 import { Subscription, Observable, of } from 'rxjs';
 
@@ -13,29 +13,30 @@ import { Subscription, Observable, of } from 'rxjs';
 
 export class HistoryPageComponent implements OnInit{
   MonthlyamortizationList$: Observable<any> = of([])
-  MonthlyamortizationList: MonthlyamortizationModel[] = [];
-  FutureMontlyamortizationList: Array<MonthlyamortizationModel> = []
+  DailyamortizationList$: Observable<any> = of([])
+  MesActual: string ="";
+  AnioActual: string ="";
+  FechaActual = new Date();
 
-//  constructor(private investmentService: InvestmentService){}
   constructor(private searchService: SearchService){}
 
   listObservers$: Array<Subscription>=[]
 
   ngOnInit(): void{
-    this.searchService.SearchYearlyAmortization$('2022')
-          .subscribe((response: MonthlyamortizationModel[]) => {
-                        this.MonthlyamortizationList = response
-                      }, err => {console.log('Error de conexion');}
-                    )
+
+    this.MesActual = (this.FechaActual.getMonth() + 1).toString();
+    this.AnioActual = (this.FechaActual.getFullYear()).toString();
+
+    this.MonthlyamortizationList$ = this.searchService.SearchYearlyAmortization$(this.AnioActual)
+    this.DailyamortizationList$ = this.searchService.SearchMonthlyAmortization$(this.AnioActual,this.MesActual)
 
   }
 
-  receiveData(event: string):void {
-    console.log('✌ Padre: has digitado --> ', event);
-    this.MonthlyamortizationList$ = this.searchService.SearchYearlyAmortization$(event)
-    //.subscribe((data) => {this.MonthlyamortizationList$ = data;});
-
-
+    recibeData(datoCambiado: string[]):void {
+    console.log('Recibe data padre -->',datoCambiado)
+//    recibeData(anio: string, mes: string):void {
+    this.MonthlyamortizationList$ = this.searchService.SearchYearlyAmortization$(datoCambiado[0])
+    this.DailyamortizationList$ = this.searchService.SearchMonthlyAmortization$(datoCambiado[0],datoCambiado[1])
   }
 
 
