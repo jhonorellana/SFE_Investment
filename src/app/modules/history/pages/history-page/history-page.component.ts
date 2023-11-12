@@ -14,6 +14,8 @@ import { Subscription, Observable, of } from 'rxjs';
 export class HistoryPageComponent implements OnInit{
   MonthlyamortizationList$: Observable<any> = of([])
   DailyamortizationList$: Observable<any> = of([])
+  MonamortizationOwnerList$: Observable<any> = of([])
+
   MesActual: string ="";
   AnioActual: string ="";
   FechaActual = new Date();
@@ -29,14 +31,15 @@ export class HistoryPageComponent implements OnInit{
 
     this.MonthlyamortizationList$ = this.searchService.SearchYearlyAmortization$(this.AnioActual)
     this.DailyamortizationList$ = this.searchService.SearchMonthlyAmortization$(this.AnioActual,this.MesActual)
+    this.MonamortizationOwnerList$ = this.searchService.SearchMonAmortizationOwner$(this.AnioActual,this.MesActual)
 
   }
 
     recibeData(datoCambiado: string[]):void {
     console.log('Recibe data padre -->',datoCambiado)
-//    recibeData(anio: string, mes: string):void {
     this.MonthlyamortizationList$ = this.searchService.SearchYearlyAmortization$(datoCambiado[0])
     this.DailyamortizationList$ = this.searchService.SearchMonthlyAmortization$(datoCambiado[0],datoCambiado[1])
+    this.MonamortizationOwnerList$ = this.searchService.SearchMonAmortizationOwner$(datoCambiado[0],datoCambiado[1])
   }
 
 

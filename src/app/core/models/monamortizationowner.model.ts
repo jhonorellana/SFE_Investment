@@ -1,13 +1,9 @@
-export interface DailyamortizationModel
+export interface MonamortizationownerModel
   {
-    compra: string;
     fecha: string;
     propietario: string;
     empresa: string;
-    tasa: string;
-    rendimiento: string;
     interes: string;
     capital: string;
     total: string;
   }
-

@@ -23,6 +23,10 @@ export class SearchService {
 
   }
 
+  SearchMonAmortizationOwner$(anio: string, mes: string): Observable<any>{
+    return this.http.get(`${this.URL}monamortizationowner?year=${anio}&month=${mes}`);
+
+  }
 
 /*
   getAllMontlyAmortization$(): Observable<any>{
