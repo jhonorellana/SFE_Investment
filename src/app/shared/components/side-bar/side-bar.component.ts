@@ -24,12 +24,12 @@ export class SideBarComponent implements OnInit {
       {
         name: 'Vencimientos',
         icon: 'uil uil-calendar-alt',
-        router: ['/', 'investment'],
+        router: ['/', 'history'],
       },
       {
-        name: 'History',
+        name: 'Inversiones',
         icon: 'uil uil-analytics',
-        router: ['/', 'history'],
+        router: ['/', 'investment'],
       },
       {
         name: 'Balance',
