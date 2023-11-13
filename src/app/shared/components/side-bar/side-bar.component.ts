@@ -40,6 +40,11 @@ export class SideBarComponent implements OnInit {
         name: 'Portafolio',
         icon: 'uil uil-bag',
         router: ['/', 'statistics'],
+      },
+      {
+        name: 'Acciones',
+        icon: 'uil uil-chart-line',
+        router: ['/', 'shares'],
       }
     ]
 
