@@ -17,7 +17,7 @@ export class InvestmentPageComponent implements OnInit{
   listObservers$: Array<Subscription>=[]
 
   ngOnInit(): void{
-    this.investmentService.getMonthlyDataForCurrentMonth$('Noviembre') 
+    this.investmentService.getMonthlyDataForCurrentMonth$('Diciembre')
           .subscribe((response: MonthlyamortizationModel[]) => {
                         this.MonthlyamortizationList = response
                       }, err => {console.log('Error de conexion');}

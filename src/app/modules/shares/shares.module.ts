@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharesRoutingModule } from './shares-routing.module';
 import { SharesPageComponent } from './pages/shares-page/shares-page.component';
 import { SearchComponent } from './components/search/search.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SearchComponent } from './components/search/search.component';
   ],
   imports: [
     CommonModule,
-    SharesRoutingModule
+    SharesRoutingModule,
+    SharedModule
   ]
 })
 export class SharesModule { }

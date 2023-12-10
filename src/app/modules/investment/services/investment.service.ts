@@ -14,7 +14,8 @@ export class InvestmentService {
 //    constructor(private httpClient: HttpClient) {}
 
     getAllMontlyAmortization$(): Observable<any>{
-          console.log('Entré a consultar nuevamente');
+          console.log('Entré a consultar nuevamente -- >');
+          console.log(`${this.URL}amortization`);
           return this.httpClient.get(`${this.URL}amortization`);
     }
 
@@ -23,7 +24,7 @@ export class InvestmentService {
       return this.getAllMontlyAmortization$().pipe(
         map((data: any[]) => {
           console.log('Data from service:', data);
-          return data.filter((item) => item.month === 'Octubre');
+          return data.filter((item) => item.month === 'Diciembre');
         })
       );
     }

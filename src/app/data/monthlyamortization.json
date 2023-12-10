@@ -1,254 +1,254 @@
 [
   {
-    "year": "2020",
-    "month": "Enero",
+    "anio": "2020",
+    "mes": "Enero",
     "capital": "1000.00",
-    "interest": "100.00",
+    "interes": "100.00",
     "total": "1100.00"
   },
   {
-    "year": "2020",
-    "month": "Febrero",
+    "anio": "2020",
+    "mes": "Febrero",
     "capital": "1000.00",
-    "interest": "200.00",
+    "interes": "200.00",
     "total": "1200.00"
   },
   {
-    "year": "2020",
-    "month": "Marzo",
+    "anio": "2020",
+    "mes": "Marzo",
     "capital": "1000.00",
-    "interest": "300.00",
+    "interes": "300.00",
     "total": "1300.00"
   },
   {
-    "year": "2020",
-    "month": "Abril",
+    "anio": "2020",
+    "mes": "Abril",
     "capital": "1000.00",
-    "interest": "400.00",
+    "interes": "400.00",
     "total": "1400.00"
   },
   {
-    "year": "2020",
-    "month": "Mayo",
+    "anio": "2020",
+    "mes": "Mayo",
     "capital": "1000.00",
-    "interest": "500.00",
+    "interes": "500.00",
     "total": "1500.00"
   },
   {
-    "year": "2020",
-    "month": "Junio",
+    "anio": "2020",
+    "mes": "Junio",
     "capital": "1000.00",
-    "interest": "600.00",
+    "interes": "600.00",
     "total": "1600.00"
   },
   {
-    "year": "2020",
-    "month": "Julio",
+    "anio": "2020",
+    "mes": "Julio",
     "capital": "1000.00",
-    "interest": "700.00",
+    "interes": "700.00",
     "total": "1700.00"
   },
   {
-    "year": "2020",
-    "month": "Agosto",
+    "anio": "2020",
+    "mes": "Agosto",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2020",
-    "month": "Septiembre",
+    "anio": "2020",
+    "mes": "Septiembre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2020",
-    "month": "Octubre",
+    "anio": "2020",
+    "mes": "Octubre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2020",
-    "month": "Noviembre",
+    "anio": "2020",
+    "mes": "Noviembre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2020",
-    "month": "Diciembre",
+    "anio": "2020",
+    "mes": "Diciembre",
     "capital": "1000.00",
-    "interest": "900.00",
+    "interes": "900.00",
     "total": "1900.00"
   },
   {
-    "year": "2023",
-    "month": "Enero",
+    "anio": "2023",
+    "mes": "Enero",
     "capital": "1000.00",
-    "interest": "100.00",
+    "interes": "100.00",
     "total": "1100.00"
   },
   {
-    "year": "2023",
-    "month": "Febrero",
+    "anio": "2023",
+    "mes": "Febrero",
     "capital": "1000.00",
-    "interest": "200.00",
+    "interes": "200.00",
     "total": "1200.00"
   },
   {
-    "year": "2023",
-    "month": "Marzo",
+    "anio": "2023",
+    "mes": "Marzo",
     "capital": "1000.00",
-    "interest": "300.00",
+    "interes": "300.00",
     "total": "1300.00"
   },
   {
-    "year": "2023",
-    "month": "Abril",
+    "anio": "2023",
+    "mes": "Abril",
     "capital": "1000.00",
-    "interest": "400.00",
+    "interes": "400.00",
     "total": "1400.00"
   },
   {
-    "year": "2023",
-    "month": "Mayo",
+    "anio": "2023",
+    "mes": "Mayo",
     "capital": "1000.00",
-    "interest": "500.00",
+    "interes": "500.00",
     "total": "1500.00"
   },
   {
-    "year": "2023",
-    "month": "Junio",
+    "anio": "2023",
+    "mes": "Junio",
     "capital": "1000.00",
-    "interest": "600.00",
+    "interes": "600.00",
     "total": "1600.00"
   },
   {
-    "year": "2023",
-    "month": "Julio",
+    "anio": "2023",
+    "mes": "Julio",
     "capital": "1000.00",
-    "interest": "700.00",
+    "interes": "700.00",
     "total": "1700.00"
   },
   {
-    "year": "2023",
-    "month": "Agosto",
+    "anio": "2023",
+    "mes": "Agosto",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2023",
-    "month": "Septiembre",
+    "anio": "2023",
+    "mes": "Septiembre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2023",
-    "month": "Octubre",
+    "anio": "2023",
+    "mes": "Octubre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2023",
-    "month": "Noviembre",
+    "anio": "2023",
+    "mes": "Noviembre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2023",
-    "month": "Diciembre",
+    "anio": "2023",
+    "mes": "Diciembre",
     "capital": "1000.00",
-    "interest": "900.00",
+    "interes": "900.00",
     "total": "1900.00"
   },
   {
-    "year": "2024",
-    "month": "Enero",
+    "anio": "2024",
+    "mes": "Enero",
     "capital": "1000.00",
-    "interest": "100.00",
+    "interes": "100.00",
     "total": "1100.00"
   },
   {
-    "year": "2024",
-    "month": "Febrero",
+    "anio": "2024",
+    "mes": "Febrero",
     "capital": "1000.00",
-    "interest": "200.00",
+    "interes": "200.00",
     "total": "1200.00"
   },
   {
-    "year": "2024",
-    "month": "Marzo",
+    "anio": "2024",
+    "mes": "Marzo",
     "capital": "1000.00",
-    "interest": "300.00",
+    "interes": "300.00",
     "total": "1300.00"
   },
   {
-    "year": "2024",
-    "month": "Abril",
+    "anio": "2024",
+    "mes": "Abril",
     "capital": "1000.00",
-    "interest": "400.00",
+    "interes": "400.00",
     "total": "1400.00"
   },
   {
-    "year": "2024",
-    "month": "Mayo",
+    "anio": "2024",
+    "mes": "Mayo",
     "capital": "1000.00",
-    "interest": "500.00",
+    "interes": "500.00",
     "total": "1500.00"
   },
   {
-    "year": "2024",
-    "month": "Junio",
+    "anio": "2024",
+    "mes": "Junio",
     "capital": "1000.00",
-    "interest": "600.00",
+    "interes": "600.00",
     "total": "1600.00"
   },
   {
-    "year": "2024",
-    "month": "Julio",
+    "anio": "2024",
+    "mes": "Julio",
     "capital": "1000.00",
-    "interest": "700.00",
+    "interes": "700.00",
     "total": "1700.00"
   },
   {
-    "year": "2024",
-    "month": "Agosto",
+    "anio": "2024",
+    "mes": "Agosto",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2024",
-    "month": "Septiembre",
+    "anio": "2024",
+    "mes": "Septiembre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2024",
-    "month": "Octubre",
+    "anio": "2024",
+    "mes": "Octubre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2024",
-    "month": "Noviembre",
+    "anio": "2024",
+    "mes": "Noviembre",
     "capital": "1000.00",
-    "interest": "800.00",
+    "interes": "800.00",
     "total": "1800.00"
   },
   {
-    "year": "2024",
-    "month": "Diciembre",
+    "anio": "2024",
+    "mes": "Diciembre",
     "capital": "1000.00",
-    "interest": "900.00",
+    "interes": "900.00",
     "total": "1900.00"
   }
 ]

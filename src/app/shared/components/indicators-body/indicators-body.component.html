@@ -10,7 +10,7 @@
           <ng-container *ngTemplateOutlet="coverSection;context:{share:item}"></ng-container>
       </li>
       <li class="track-name-opacity">
-         {{item.fecha}} - {{item.emisor}} - {{item.cantidad}} - {{item.valor}} - {{item.precio}} - {{item.transacciones}}
+         {{item.fecha}} 1 - {{item.emisor}} 2 - {{item.cantidad}} 3 - {{item.valor}} - {{item.precio}} - {{item.transacciones}}
       </li>
   </ul>
 </div>
@@ -19,8 +19,8 @@
 <ng-template #coverSection let-item="share">
   <div class="cover-section">
       <div class="cover-info">
-          <div class="name-track">{{item.date}}</div>
-          <div class="name-track-details">{{item.enterprise}}</div>
+          <div class="name-track">{{item.date}} pito </div>
+          <div class="name-track-details">{{item.enterprise}} colorito</div>
       </div>
   </div>
 </ng-template>
