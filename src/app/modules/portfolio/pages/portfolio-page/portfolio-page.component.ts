@@ -19,6 +19,31 @@ export class PortfolioPageComponent implements OnInit {
   yoyo: Array<any> = [];
   namename: Array<any> = [];
 
+
+
+  chartOptions = {
+    animationEnabled: true,
+    title: {
+      text: "capital por propietario"
+    },
+    data: [{
+      type: "pie",
+      startAngle: -90,
+      indexLabel: "{name}: {y}",
+      yValueFormatString: "#,###.##'%'",
+      dataPoints: [
+        { y: 14.1, name: "Toys" },
+        { y: 28.2, name: "Electronics" },
+        { y: 14.4, name: "Groceries" },
+        { y: 43.3, name: "Furniture" }
+      ],
+    }
+    ]
+  };
+
+
+
+/*
   chartOptions = {
     animationEnabled: true,
     title: {
@@ -34,12 +59,23 @@ export class PortfolioPageComponent implements OnInit {
     ]
   };
 
+*/
+
+
+
   ngOnInit(): void {
     this.portfolioService.getInvestOwner$()
       .subscribe(
         (response: InvestownernewModel[]) => {
           this.dataInvestownernewlist = response;
           console.log(this.dataInvestownernewlist);
+
+
+          // Actualiza directamente dataPoints en el objeto chartOptions
+          this.chartOptions.data[0].dataPoints = this.dataInvestownernewlist.map(entry => ({
+           name: entry.name,
+           y: entry.y
+          }));
 
 
 
@@ -67,20 +103,6 @@ export class PortfolioPageComponent implements OnInit {
         }
       );
 
-      this.chartOptions = {
-        animationEnabled: true,
-        title: {
-          text: "capital por propietario"
-        },
-        data: [{
-          type: "pie",
-          startAngle: -90,
-          indexLabel: "{name}: {y}",
-          yValueFormatString: "#,###.##'%'",
-          dataPoints: this.dataPointChart,
-        }
-        ]
-      };
 
 
   }
