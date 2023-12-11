@@ -16,6 +16,8 @@ export class PortfolioPageComponent implements OnInit {
 
   dataInvestownernewlist: Array<InvestownernewModel> = [];
   dataPointChart: Array<InvestownernewModel> = [];
+  yoyo: Array<any> = [];
+  namename: Array<any> = [];
 
   chartOptions = {
     animationEnabled: true,
@@ -39,12 +41,24 @@ export class PortfolioPageComponent implements OnInit {
           this.dataInvestownernewlist = response;
           console.log(this.dataInvestownernewlist);
 
+
+
+          this.yoyo = this.dataInvestownernewlist.map(function(elem){
+            return elem.y;
+          })
+
+          this.namename = this.dataInvestownernewlist.map(function(elem){
+            return elem.name;
+          })
+
           this.dataPointChart = this.dataInvestownernewlist.map(entry => ({
             y: entry.y,
             name: entry.name
           }));
 
           console.log(this.dataPointChart);
+          console.log(this.yoyo);
+          console.log(this.namename);
           // Detecta los cambios manualmente
          // this.cdr.detectChanges();
         },
@@ -52,5 +66,22 @@ export class PortfolioPageComponent implements OnInit {
           console.log('Error de conexión');
         }
       );
+
+      this.chartOptions = {
+        animationEnabled: true,
+        title: {
+          text: "capital por propietario"
+        },
+        data: [{
+          type: "pie",
+          startAngle: -90,
+          indexLabel: "{name}: {y}",
+          yValueFormatString: "#,###.##'%'",
+          dataPoints: this.dataPointChart,
+        }
+        ]
+      };
+
+
   }
 }
