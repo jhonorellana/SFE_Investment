@@ -13,20 +13,13 @@ export class InvestmentService {
   constructor(private httpClient: HttpClient, private datePipe: DatePipe) {}
 //    constructor(private httpClient: HttpClient) {}
 
-    getAllMontlyAmortization$(): Observable<any>{
-          console.log('Entré a consultar nuevamente -- >');
-          console.log(`${this.URL}amortization`);
-          return this.httpClient.get(`${this.URL}amortization`);
+    getInvestOwner$(): Observable<any>{
+          return this.httpClient.get(`${this.URL}investowner`);
     }
 
-    getMonthlyDataForCurrentMonth$(currentMonth: string ): Observable<any> {
-      console.log('Dentro de la funcion esta -->',currentMonth);
-      return this.getAllMontlyAmortization$().pipe(
-        map((data: any[]) => {
-          console.log('Data from service:', data);
-          return data.filter((item) => item.month === 'Diciembre');
-        })
-      );
+
+    getInvestByEnterprise$(): Observable<any>{
+      return this.httpClient.get(`${this.URL}investenterprise`);
     }
 
 

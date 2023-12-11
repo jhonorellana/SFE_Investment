@@ -8,6 +8,7 @@ import { SectionGenericComponent } from './components/section-generic/section-ge
 import { IndicatorsHeaderComponent } from './components/indicators-header/indicators-header.component';
 import { IndicatorsBodyComponent } from './components/indicators-body/indicators-body.component';
 import { RouterModule } from '@angular/router';
+import { SectionSummaryComponent } from './components/section-summary/section-summary.component';
 
 
 
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     CardMonthComponent,
     SectionGenericComponent,
     IndicatorsHeaderComponent,
-    IndicatorsBodyComponent
+    IndicatorsBodyComponent,
+    SectionSummaryComponent
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     CardMonthComponent,
     SectionGenericComponent,
+    SectionSummaryComponent,
     IndicatorsHeaderComponent,
     IndicatorsBodyComponent
   ]
