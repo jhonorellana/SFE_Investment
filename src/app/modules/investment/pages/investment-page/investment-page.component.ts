@@ -30,7 +30,7 @@ export class InvestmentPageComponent implements OnInit{
                 }, err => {console.log('Error de conexion');}
               )
 
-
+//    console.log(this.dataInvestownerlist)
 
   }
 

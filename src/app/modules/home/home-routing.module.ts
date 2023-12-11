@@ -22,6 +22,10 @@ const routes: Routes = [
     loadChildren: () => import('@modules/history/history.module').then(m => m.HistoryModule)
   },
   {
+    path: 'portfolio',
+    loadChildren: () => import('@modules/portfolio/portfolio.module').then(m => m.PortfolioModule)
+  },
+  {
     path: 'shares',
     loadChildren: () => import('@modules/shares/shares.module').then(m => m.SharesModule)
   },

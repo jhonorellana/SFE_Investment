@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +17,8 @@ import { DatePipe } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    CanvasJSAngularChartsModule
   ],
   providers: [
     DatePipe
